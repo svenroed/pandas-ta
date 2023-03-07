@@ -1046,9 +1046,6 @@ class AnalysisIndicators(object):
         result = rsi(close=close, length=length, scalar=scalar, drift=drift, offset=offset, **kwargs)
         return self._post_process(result, **kwargs)
 
-<<<<<<< Updated upstream
-    def rsx(self, length=None, drift=None, offset: Int = None, **kwargs: DictLike):
-=======
     def pivot(
             self,
             anchor=None,
@@ -1059,7 +1056,7 @@ class AnalysisIndicators(object):
         high = self._get_column(kwargs.pop("high", "high"))
         low = self._get_column(kwargs.pop("low", "low"))
         close = self._get_column(kwargs.pop("close", "close"))
-        result = pivots(
+        result = pivot(
             open_=open_,
             high=high,
             low=low,
@@ -1071,7 +1068,6 @@ class AnalysisIndicators(object):
         return self._post_process(result, **kwargs)
 
     def rsx(self, length=None, drift=None, offset=None, **kwargs):
->>>>>>> Stashed changes
         close = self._get_column(kwargs.pop("close", "close"))
         result = rsx(close=close, length=length, drift=drift, offset=offset, **kwargs)
         return self._post_process(result, **kwargs)
