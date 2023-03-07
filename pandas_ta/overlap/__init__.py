@@ -34,6 +34,8 @@ from .vidya import vidya
 from .wcp import wcp
 from .wma import wma
 from .zlma import zlma
+from .pivot import pivot
+
 
 __all__ = [
     "alligator",
@@ -71,4 +73,6 @@ __all__ = [
     "wcp",
     "wma",
     "zlma",
+    "pivot",
 ]
+
